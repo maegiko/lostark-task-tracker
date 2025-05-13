@@ -1,0 +1,318 @@
+/*
+##### NOTES #####
+
+First and foremost, I apologise for the mess of CSS. This was my first time
+using CSS and I experimented a lot. I thought CSS looked like pure fun and Sim
+brought up that it is sometimes the 'bane of peoples' existence'. I now fully
+understand what they mean, having gone through hours of not knowing why
+something was being styled against my wishes.
+
+Uses the below imported fonts from Google Fonts.
+Uses the Font Awesome library for their Unicode checkmark text.
+Used the following YouTube guides for CSS Transitions:
+    https://www.youtube.com/watch?v=5p7_DlApKBA
+    https://www.youtube.com/watch?v=SgmNxE9lWcY
+
+##### NOTES #####
+*/
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Spice&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+html {
+  background-color: #fff0f3;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 180px;
+  margin-bottom: 10px;
+  font-size: 60px;
+  font-family: "Archivo Black";
+}
+
+#emptyOption {
+  display: none;
+}
+
+.taskHeader {
+  font-size: 30px;
+  font-family: "Archivo Black";
+}
+
+.trackerTitle {
+  margin-top: 15px;
+}
+
+h2,
+h3 {
+  text-align: center;
+  font-family: Inter;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+p,
+label {
+  font-family: Inter;
+}
+
+input[type="submit"],
+button {
+  font-family: Inter;
+  border: transparent;
+  margin: 10px;
+  width: fit-content;
+  padding: 10px;
+  color: #fff;
+  background: #f27689;
+  font-weight: bold;
+  text-shadow: 1, 1, 0, 0;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:active,
+button:hover,
+button:focus,
+button:active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  opacity: 0;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 25px;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4;
+  width: 18px;
+  height: 18px;
+  outline: 2px solid #e7e7e7;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+input[type="checkbox"]:hover + label::before {
+  outline-color: transparent;
+  background-color: #ededed;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 4;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  outline-color: transparent;
+  background-color: #ff836b;
+}
+
+input[type="checkbox"]:focus + label::before {
+  box-shadow: 0 0 0 4px rgb(255 131 107 / 0.3);
+}
+
+form {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  font-family: Inter;
+}
+
+.daily_table,
+th {
+  border-bottom: 1px solid black;
+}
+
+td {
+  padding: 20px;
+}
+
+th {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+.Weeklies_header {
+  padding-left: 11.5px;
+}
+
+p,
+div {
+  text-align: center;
+}
+
+input {
+  text-align: left;
+}
+
+.editName {
+  width: 150px;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  background: #f9bec7;
+  border-radius: 5px;
+  outline: none;
+  font-family: Inter;
+  font-size: 1em;
+  text-align: center;
+}
+
+.charDropDown {
+  width: 150px;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  background: #f9bec7;
+  border-radius: 5px;
+  outline: none;
+  font-family: Inter;
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.charDropDown:hover {
+  border: 2px solid #f27689
+}
+
+.charDropDown option {
+  font-weight: 500;
+}
+
+.editName:focus::placeholder {
+  color: transparent;
+}
+
+.numOfChar {
+  width: 50px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  background: #f9bec7;
+  border-radius: 5px;
+  outline: none;
+  font-family: Inter;
+  font-size: 1em;
+  text-align: center;
+}
+
+img {
+  width: 25px;
+  height: 25px;
+}
+
+.chooseTaskList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  background-color: #f9bec7;
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 10px;
+  box-shadow: 0 10px 25px 1px rgb(156, 156, 156);
+  -webkit-box-shadow: 0 10px 20px 1px rgb(156, 156, 156);
+  -moz-box-shadow: 0 10px 20px 1px rgb(156, 156, 156);
+}
+
+.taskLabel {
+  margin-bottom: 10px;
+}
+
+.taskIcon {
+  margin: auto;
+}
+
+.editChar {
+  margin-bottom: 10px;
+}
+
+.dailyReset,
+.weeklyReset {
+  margin-bottom: 5px;
+}
+
+.dailyResetTime,
+.weeklyResetTime {
+  margin-top: 2px;
+  padding-bottom: 2px;
+}
+
+.drtDiv,
+.wrtDiv {
+  margin: 0 auto;
+  padding:-top 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 25px;
+  background: #f9bec7;
+  width: fit-content;
+  outline: 1px solid #f699a7;
+  box-shadow: 0 10px 20px 1px rgb(156, 156, 156);
+  -webkit-box-shadow: 0 10px 20px 1px rgb(156, 156, 156);
+  -moz-box-shadow: 0 10px 20px 1px rgb(156, 156, 156);
+}
+
+.charList {
+  display: inline-block;
+  text-align: left;
+  font-family: Inter;
+  margin-right: 20px;
+}
+
+.tracker_table {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  background: #f9bec7;
+  padding: 20px;
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 0 0 30px 1px rgb(156, 156, 156);
+  -webkit-box-shadow: 0 10px 20px 1px rgb(156, 156, 156);
+  -moz-box-shadow: 0 10px 20px 1px rgb(156, 156, 156);
+}
+
+.charNames {
+  font-size: 25;
+}

@@ -1,0 +1,52 @@
+{
+    "Una's Task": {
+        "id": "una",
+        "timer": "Daily",
+        "icon": "https://cdn-lostark.game.onstove.com/uploadfiles/notice/4cc6f903b4a74cd7bd232b89298d6c3d.png"
+    },
+    "Chaos Dungeon": {
+        "id": "chaos_d",
+        "timer": "Daily",
+        "icon": "https://cdn-lostark.game.onstove.com/uploadfiles/notice/17012ef4ba7d431daa0884121bb2d912.png"
+    },
+    "Guardian Raid": {
+        "id": "g_raid",
+        "timer": "Daily",
+        "icon": "https://cdn-lostark.game.onstove.com/uploadfiles/notice/af2a2116f60441389eaa8a8db3624f26.png"
+    },
+    "Valtan": {
+        "id": "valtan",
+        "timer": "Weekly",
+        "icon": "https://ark.bynn.kr/assets/lostark/commander0.png"
+    },
+    "Vykas": {
+        "id": "vykas",
+        "timer": "Weekly",
+        "icon": "https://ark.bynn.kr/assets/lostark/commander1.png"
+    },
+    "Kakul-Saydon": {
+        "id": "kakul-saydon",
+        "timer": "Weekly",
+        "icon": "https://ark.bynn.kr/assets/lostark/commander2.png"
+    },
+    "Brelshaza": {
+        "id": "brelshaza",
+        "timer": "Weekly",
+        "icon": "https://ark.bynn.kr/assets/lostark/commander3.png"
+    },
+    "Akkan": {
+        "id": "akkan",
+        "timer": "Weekly",
+        "icon": "https://ark.bynn.kr/assets/lostark/commander4.png"
+    },
+    "Kayangel": {
+        "id": "kayangel",
+        "timer": "Weekly",
+        "icon": "https://ark.bynn.kr/assets/lostark/illusion_stone.png"
+    },
+    "Ivory Tower": {
+        "id": "ivory_tower",
+        "timer": "Weekly",
+        "icon": "https://cdn-lostark.game.onstove.com/uploadfiles/notice/b472aa3df00f4e56be2f1f634f220900.png"
+    }
+}
